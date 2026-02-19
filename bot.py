@@ -71,7 +71,7 @@ def get_epic_promos():
             if original_price == 0:
                 continue
 
-            # Calcula desconto manualmente
+            
             discount = round(
                 ((original_price - discount_price) / original_price) * 100
             )
