@@ -66,7 +66,6 @@ def get_epic_promos():
             discount_price = price_info["discountPrice"]
             original_price = price_info["originalPrice"]
 
-            # Ignora se não tiver preço válido
             if original_price == 0:
                 continue
 
@@ -111,7 +110,7 @@ def get_epic_promos():
 async def promo(ctx):
     embed = Embed(title="🎮 Promoções Steam & Epic", color=0x00ff00)
 
-    # Steam
+
     steam_deals = get_steam_promos()
     if steam_deals:
         embed.add_field(
@@ -130,7 +129,6 @@ async def promo(ctx):
                 inline=False
             )
 
-    # Epic
     epic_deals = get_epic_promos()
     if epic_deals:
         embed.add_field(
