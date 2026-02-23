@@ -17,7 +17,7 @@ bot = commands.Bot(command_prefix="!", intents=intents)
 async def on_ready():
     print(f"{bot.user} está online!")
 
-# ---------------- Steam ----------------
+
 def get_steam_promos():
     try:
         url = "https://store.steampowered.com/api/featuredcategories?cc=BR&l=portuguese"
@@ -51,7 +51,6 @@ def get_steam_promos():
         return []
 
 
-# ---------------- Epic ----------------
 def get_epic_promos():
     try:
         url = "https://store-site-backend-static.ak.epicgames.com/freeGamesPromotions?locale=pt-BR&country=BR&allowCountries=BR"
@@ -76,7 +75,7 @@ def get_epic_promos():
                 ((original_price - discount_price) / original_price) * 100
             )
 
-            # Só adiciona se tiver desconto real
+
             if discount <= 0:
                 continue
 
@@ -108,7 +107,6 @@ def get_epic_promos():
         return []
 
 
-# ---------------- Comando ----------------
 @bot.command(name="promo")
 async def promo(ctx):
     embed = Embed(title="🎮 Promoções Steam & Epic", color=0x00ff00)
