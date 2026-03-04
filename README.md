@@ -18,3 +18,6 @@ Este é um bot de Discord que mostra **promoções da Steam e da Epic Games** di
 
 - !promo: mostra os principais jogos em promoção na Steam e Epic Games
 
+## Teste o bot
+
+- [Adicionar ao Discord](https://discord.com/oauth2/authorize?client_id=1473685330790973582&permissions=274878023680&integration_type=0&scope=bot)
